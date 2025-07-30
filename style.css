@@ -1,109 +1,103 @@
-/* === GLOBAL === */
+/* General page styles */
 body {
+  background-color: white;
   font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #d0ebff; /* light blue page background */
-}
-
-/* === PAGE CONTAINER (adds border/margin) === */
-body > * {
-  max-width: 960px;
-  margin: 12px auto; /* ~half inch spacing around all content */
-  background-color: #ffffff;
-  padding: 1.5em;
-  box-sizing: border-box;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* === HEADER === */
-header {
-  text-align: center;
-  padding: 2em 1em;
-  background-color: #d0ebff;
-  border-radius: 10px;
-  box-shadow: inset 0 -2px 8px rgba(0,0,0,0.05);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #1b2a49;
-}
-
-header p {
-  font-size: 1.2em;
-  color: #5c5c8a;
-}
-
-/* === NAVIGATION === */
-nav {
-  background-color: #e6e0f8; /* light purple nav bar */
-  padding: 1em 2em;
-  border: 2px solid #d0ebff; /* border around nav */
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-  margin-bottom: 2em;
-}
-
-.navbar {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #1b2a49;
-}
-
-.navbar a:hover {
-  color: #6a4fbf;
-}
-
-/* === MAIN === */
-main {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  align-items: center;
 }
 
-/* === SECTIONS === */
-section {
-  background-color: #ffffff;
-  border-left: 6px solid #d0ebff;
-  padding: 1.5em 2em;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-
-/* === PROJECT BOXES === */
-.project-box {
-  border: 2px solid #d0ebff;
-  padding: 1.2em 1.5em;
-  border-radius: 8px;
-  margin-bottom: 1.5em;
-  background-color: #ffffff;
-}
-
-.project-box h3 {
-  margin-top: 0;
-  color: #1b2a49;
-}
-
-/* === FOOTER === */
-footer {
+/* Navigation header bar */
+nav {
+  width: 100%;
+  background-color: #ba68c8;
+  border-radius: 0 0 20px 20px;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 1em;
-  background-color: #e6e0f8;
-  color: #444;
-  font-size: 0.9em;
-  border-top: 2px solid #d0ebff;
-  border-radius: 8px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Center main content */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Project grid layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Individual project tile */
+.project-tile {
+  background-color: #add8e6;
+  color: black;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.project-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Footer (optional) */
+footer {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+.project-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 1.3em;
+  font-weight: 600;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.project-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-grid a {
+  text-decoration: none;
 }
