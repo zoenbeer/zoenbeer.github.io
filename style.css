@@ -100,4 +100,14 @@ footer {
 
 .project-grid a {
   text-decoration: none;
+  /* Full-width tile that spans two columns */
+.full-width {
+  grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+  .full-width {
+    grid-column: span 1;
+  }
+}
 }
