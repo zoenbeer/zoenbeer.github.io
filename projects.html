@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PROJECTS</title>
+<style>
+  body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .project-box {
+    background-color: #add8e6; /* light blue */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  .project-box:hover {
+    transform: scale(1.03);
+  }
+  .project-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  .project-link {
+    display: block;
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #003366; /* dark navy */
+    text-decoration: none;
+    background-color: #a0c4ff; /* slightly different blue on link */
+    border-top: 1px solid #87a3c7;
+  }
+  .project-link:hover {
+    background-color: #7ba4ff;
+    color: white;
+  }
+
+  /* Responsive for small screens */
+  @media (max-width: 600px) {
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>PROJECTS</h1>
+  <div class="projects-container">
+    <div class="project-box">
+      <img src="project1-image.jpg" alt="Project 1 Image" />
+      <a class="project-link" href="project1.html">Project 1 Title</a>
+    </div>
+    <div class="project-box">
+      <img src="project2-image.jpg" alt="Project 2 Image" />
+      <a class="project-link" href="project2.html">Project 2 Title</a>
+    </div>
+    <!-- Add more project boxes here -->
+  </div>
+</body>
+</html>
