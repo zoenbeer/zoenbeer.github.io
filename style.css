@@ -1,39 +1,34 @@
-/* Global styles */
+/* --- Base Styling --- */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fdfdfd;
-  color: #333;
+  color: #1b2a49; /* navy */
   line-height: 1.6;
 }
 
-main {
-  padding: 2em;
-  max-width: 800px;
-  margin: 0 auto;
+/* Centered header with color pop */
+header {
+  background-color: #d0ebff; /* light blue */
+  text-align: center;
+  padding: 2em 1em;
 }
 
-h1, h2 {
-  color: #9a1f40;
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #1b2a49;
 }
 
-ul {
-  padding-left: 1.2em;
+header p {
+  font-size: 1.2em;
+  color: #5c5c8a; /* soft purple text */
 }
 
-a {
-  color: #9a1f40;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Nav bar */
+/* Navigation */
 nav {
-  background-color: #f7bfbf;
+  background-color: #e6e0f8; /* light purple */
   padding: 1em 2em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
@@ -42,26 +37,33 @@ nav {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5em;
+  justify-content: center;
+  gap: 2em;
   margin: 0;
   padding: 0;
 }
 
-.navbar li {
-  display: inline;
-}
-
 .navbar a {
+  text-decoration: none;
   font-weight: bold;
+  color: #1b2a49;
 }
 
-/* Footer */
-footer {
-  text-align: center;
+.navbar a:hover {
+  color: #6a4fbf;
+}
+
+/* --- Main Content Layout --- */
+main {
+  max-width: 900px;
+  margin: 2em auto;
   padding: 1em;
-  background-color: #eee;
-  font-size: 0.9em;
-  color: #666;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
-oration: none;
-}
+
+/* Fun, card-style sections */
+section {
+  background-
+
