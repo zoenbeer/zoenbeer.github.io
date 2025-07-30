@@ -1,18 +1,29 @@
-/* --- Base Styling --- */
+/* === GLOBAL === */
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fdfdfd;
-  color: #1b2a49; /* navy */
-  line-height: 1.6;
+  background-color: #d0ebff; /* light blue page background */
 }
 
-/* Centered header with color pop */
+/* === PAGE CONTAINER (adds border/margin) === */
+body > * {
+  max-width: 960px;
+  margin: 12px auto; /* ~half inch spacing around all content */
+  background-color: #ffffff;
+  padding: 1.5em;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* === HEADER === */
 header {
-  background-color: #d0ebff; /* light blue */
   text-align: center;
   padding: 2em 1em;
+  background-color: #d0ebff;
+  border-radius: 10px;
+  box-shadow: inset 0 -2px 8px rgba(0,0,0,0.05);
 }
 
 header h1 {
@@ -23,14 +34,17 @@ header h1 {
 
 header p {
   font-size: 1.2em;
-  color: #5c5c8a; /* soft purple text */
+  color: #5c5c8a;
 }
 
-/* Navigation */
+/* === NAVIGATION === */
 nav {
-  background-color: #e6e0f8; /* light purple */
+  background-color: #e6e0f8; /* light purple nav bar */
   padding: 1em 2em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border: 2px solid #d0ebff; /* border around nav */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  margin-bottom: 2em;
 }
 
 .navbar {
@@ -45,7 +59,7 @@ nav {
 
 .navbar a {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   color: #1b2a49;
 }
 
@@ -53,39 +67,43 @@ nav {
   color: #6a4fbf;
 }
 
-/* --- Main Content Layout --- */
-<main>
-  <section>
-    <h2>Welcome!</h2>
-    <p>I'm Zoe Beer, a marketing student with a passion for content creation, campaign strategy, and branding. This portfolio highlights selected works across email marketing, social media, event promotions, and coursework.</p>
-  </section>
+/* === MAIN === */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
 
-  <section>
-    <h2>Explore My Work</h2>
-    <ul>
-      <li><a href="email-campaigns.html">Email Campaigns</a></li>
-      <li><a href="social-media.html">Social Media Strategy</a></li>
-      <li><a href="event-promotions.html">Event Promotions</a></li>
-      <li><a href="coursework.html">Coursework</a></li>
-    </ul>
-  </section>
-</main>
-
-
-/* Fun, card-style sections */
+/* === SECTIONS === */
 section {
-  background-
-
-.project-box {
   background-color: #ffffff;
-  border: 2px solid #d0ebff;
-  padding: 1em 1.5em;
-  margin-bottom: 1.5em;
+  border-left: 6px solid #d0ebff;
+  padding: 1.5em 2em;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* === PROJECT BOXES === */
+.project-box {
+  border: 2px solid #d0ebff;
+  padding: 1.2em 1.5em;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  background-color: #ffffff;
 }
 
 .project-box h3 {
   margin-top: 0;
   color: #1b2a49;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #e6e0f8;
+  color: #444;
+  font-size: 0.9em;
+  border-top: 2px solid #d0ebff;
+  border-radius: 8px;
 }
