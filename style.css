@@ -1,7 +1,15 @@
+/* Global Font Import (add this in your HTML head) */
+/* <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet"> */
+
+/* Global font */
+* {
+  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+}
+
 /* General page styles */
 body {
   background-color: white;
-  font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -43,7 +51,7 @@ main {
   text-align: center;
 }
 
-/* Project grid layout */
+/* Project grid layout (used on all subpages) */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -52,34 +60,24 @@ main {
   margin-top: 2rem;
 }
 
-/* Individual project tile */
-.project-tile {
+/* Project grid layout for homepage (with full-width tiles) */
+.project-grid.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.project-grid.home .full-width {
+  grid-column: span 2;
+  height: 250px;
   background-color: #add8e6;
-  color: black;
-  aspect-ratio: 1 / 1;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 1.2rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project-tile:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-/* Footer (optional) */
-footer {
-  margin: 2rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
-}
+/* Individual project tile */
 .project-tile {
   background-color: #add8e6;
   color: black;
@@ -99,29 +97,23 @@ footer {
   word-break: break-word;
 }
 
-
 .project-tile:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
-.project-grid.home {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  max-width: 900px;
-  margin: 40px auto;
+/* Footer (optional) */
+footer {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
 }
 
-.project-grid.home .full-width {
-  grid-column: span 2;
-  height: 250px; /* adjust height as needed */
-  background-color: #add8e6; /* light blue */
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
+/* Responsive layout for small screens */
 @media (max-width: 600px) {
+  .project-grid,
   .project-grid.home {
     grid-template-columns: 1fr;
   }
@@ -130,4 +122,3 @@ footer {
     grid-column: span 1;
   }
 }
-
