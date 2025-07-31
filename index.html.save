@@ -28,11 +28,24 @@
   <main>
   
 
-  <div class="project-grid home">
-  <div class="project-tile full-width"></div>
+  <div class="project-grid">
+  <div class="project-tile full-width">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Explore my work in marketing, design, and strategy.</p>
+  </div>
 </div>
 
 
 </main>
 
   
+code .
+
+code .
+git add .
+git commit -m "Your commit message here"
+git push origin main
+
+
+
+
