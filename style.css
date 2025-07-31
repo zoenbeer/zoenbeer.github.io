@@ -96,6 +96,19 @@ main {
   text-decoration: none;
   word-break: break-word;
 }
+.project-tile {
+  position: relative;
+  flex-direction: column; /* allow stacking image + text */
+}
+
+/* Logo inside the tile */
+.tile-logo {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
 
 .project-tile:hover {
   transform: translateY(-4px);
