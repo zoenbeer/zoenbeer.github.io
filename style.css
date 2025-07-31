@@ -81,17 +81,24 @@ footer {
   color: #888;
 }
 .project-tile {
+  background-color: #add8e6;
+  color: black;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-radius: 12px;
-  font-size: 1.3em;
   font-weight: 600;
-  aspect-ratio: 1 / 1;
+  font-size: 1.2rem;
+  padding: 1rem;
+  overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  word-break: break-word;
 }
+
 
 .project-tile:hover {
   transform: translateY(-4px);
