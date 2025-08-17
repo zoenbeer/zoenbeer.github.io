@@ -1,166 +1,64 @@
-/* Global Font Import (add this in your HTML head) */
-/* <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet"> */
-
-/* Global font */
-* {
-  font-family: 'Rubik', sans-serif;
-  box-sizing: border-box;
-}
-
-/* General page styles */
-body {
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Navigation header bar */
-nav {
-  width: 100%;
-  background-color: #ba68c8;
-  border-radius: 0 0 20px 20px;
-  padding: 1rem 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: inline-flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* Center main content */
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-/* Project grid layout (used on all subpages) */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 10px; /* tighter spacing between boxes */
+  margin: 20px auto;
+  max-width: 1200px; /* keeps it centered */
 }
 
-/* Project grid layout for homepage (with full-width tiles) */
-.project-grid.home {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  max-width: 900px;
-  margin: 40px auto;
-}
-
-.project-grid.home .full-width {
-  grid-column: span 2;
-  height: 250px;
-  background-color: #add8e6;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Individual project tile */
 .project-tile {
-  background-color: #add8e6;
-  color: black;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px; /* larger tiles like the example site */
   text-align: center;
+  font-size: 1.5rem;
   font-weight: 600;
-  font-size: 1.2rem;
-  padding: 1rem;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
-  word-break: break-word;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
-.project-tile {
-  position: relative;
-  flex-direction: column; /* allow stacking image + text */
-}
-
-/* Logo inside the tile */
-.tile-logo {
-  max-width: 60%;
-  height: auto;
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
-}
-
 
 .project-tile:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  transform: scale(1.02); /* subtle hover zoom */
+  opacity: 0.9;
 }
 
-/* Footer (optional) */
-footer {
-  margin: 2rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
+.tile-logo {
+  max-width: 80%;
+  max-height: 120px;
+  object-fit: contain;
+}
+body {
+  background-color: #fdfcf9; /* soft off-white like the example */
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Responsive layout for small screens */
-@media (max-width: 600px) {
-  .project-grid,
-  .project-grid.home {
-    grid-template-columns: 1fr;
-  }
+nav {
+  text-align: center;
+  margin: 30px 0;
+}
 
-  .project-grid.home .full-width {
-    grid-column: span 1;
-  }
+.navbar {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  gap: 20px;
+}
 
-  .home-header {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-.bio {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1rem;
-  text-align: center;
-}
-.contact {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 1rem;
-  text-align: center;
-}
-.contact a {
-  color: #005996;
+.navbar li a {
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: black;
+  letter-spacing: 1px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s;
 }
 
+.navbar li a:hover {
+  border-bottom: 1px solid black;
+}
+.project-grid {
+  gap: 0;
 }
