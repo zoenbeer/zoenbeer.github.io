@@ -1,3 +1,26 @@
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* spacing between links */
+  padding: 20px 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  letter-spacing: 3px; /* wide spacing between letters */
+  text-transform: uppercase; /* all caps */
+  font-weight: normal; /* not bold */
+}
+
+.navbar a.active {
+  text-decoration: underline; /* only the active page is underlined */
+}
+
+
+
 /* General centering */
 body {
   display: flex;
