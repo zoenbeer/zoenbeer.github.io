@@ -29,7 +29,7 @@ body {
   text-align: center;
   margin: 3;
   padding: 3;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Work section grid */
@@ -62,9 +62,34 @@ body {
   object-fit: contain;
 }
 
-/* Contact section */
-.contact {
-  font-size: 0.8rem; /* smaller than main text */
-  margin-top: 20px;
+/* Contact box styling */
+.contact-box {
+  background-color: #a6bfd8; /* light blue */
+  padding: 20px 30px;
+  margin: 40px auto;
+  text-align: center;
+  border-radius: 10px; /* soft rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: fit-content; /* only as wide as content */
+  min-width: 250px; /* ensures not too narrow */
+}
+
+.contact-box h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.contact-box p {
+  margin: 8px 0;
+  font-size: 0.9rem; /* smaller than body text */
+}
+
+.contact-box a {
+  color: #005996; /* darker blue for links */
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
 }
 
