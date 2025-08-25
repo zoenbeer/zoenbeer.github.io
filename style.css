@@ -47,7 +47,7 @@ body {
 .project-tile {
   width: 250px;
   height: 250px;
-  border-radius: 0; /* removes curved edges */
+  border-radius: 3; /* removes curved edges */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +64,7 @@ body {
 
 /* Contact section */
 .contact {
-  font-size: 0.9rem; /* smaller than main text */
+  font-size: 0.7rem; /* smaller than main text */
   margin-top: 20px;
 }
 
