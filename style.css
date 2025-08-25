@@ -9,7 +9,7 @@
 .navbar a {
   text-decoration: none;
   color: black;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   letter-spacing: 3px; /* wide spacing between letters */
   text-transform: uppercase; /* all caps */
   font-weight: normal; /* not bold */
