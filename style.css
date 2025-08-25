@@ -1,8 +1,23 @@
-/* Navbar styling */
+/* ==========================
+   Global
+========================== */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================
+   Navbar
+========================== */
 .navbar {
   display: flex;
   justify-content: center;
-  gap: 60px; /* spacing between links */
+  gap: 60px;
   padding: 20px 0;
 }
 
@@ -10,93 +25,20 @@
   text-decoration: none;
   color: black;
   font-size: 0.6rem;
-  letter-spacing: 3px; /* wide spacing between letters */
-  text-transform: uppercase; /* all caps */
-  font-weight: normal; /* not bold */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .navbar a.active {
-  text-decoration: underline; /* only the active page is underlined */
-}
-
-
-
-/* General centering */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 3;
-  padding: 3;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Work section grid */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px; /* space between boxes */
-  justify-items: center;
-  max-width: 1000px; /* prevents going edge to edge */
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-/* Square project tiles */
-.project-tile {
-  width: 250px;
-  height: 250px;
-  border-radius: 3; /* removes curved edges */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background-color: white;
-}
-
-.project-tile img {
-  max-width: 80%;
-  max-height: 80%;
-  object-fit: contain;
-}
-
-/* Contact box styling */
-.contact-box {
-  background-color: #d2b6e1; 
-  padding: 20px 30px;
-  margin: 40px auto;
-  text-align: center;
-  border-radius: 10px; /* soft rounded corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: fit-content; /* only as wide as content */
-  min-width: 250px; /* ensures not too narrow */
-}
-
-.contact-box h2 {
-  margin-top: 0;
-  font-size: 1.3rem;
-}
-
-.contact-box p {
-  margin: 8px 0;
-  font-size: 0.9rem; /* smaller than body text */
-}
-
-.contact-box a {
-  color: #005996; /* darker blue for links */
-  text-decoration: none;
-}
-
-.contact-box a:hover {
   text-decoration: underline;
 }
 
-/* Hero section */
+/* ==========================
+   Hero
+========================== */
 .hero {
-  background: linear-gradient(135deg, #d9ecff, #e6ddff);
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
   color: #001f3f; /* navy */
 }
@@ -115,7 +57,9 @@ body {
   color: #333;
 }
 
-/* About section */
+/* ==========================
+   About
+========================== */
 .about {
   background-color: #ffffff;
   padding: 60px 20px;
@@ -145,7 +89,9 @@ body {
   color: #222;
 }
 
-/* Featured Work */
+/* ==========================
+   Featured Work
+========================== */
 .featured-work {
   background-color: #e6ddff; /* light purple background */
   text-align: center;
@@ -153,7 +99,7 @@ body {
 }
 
 .featured-work h2 {
-  color: #001f3f; /* navy */
+  color: #001f3f;
   margin-bottom: 30px;
 }
 
@@ -166,15 +112,17 @@ body {
   margin: auto;
 }
 
+/* Shared project tile styling */
 .project-tile {
   width: 220px;
   height: 220px;
-  border-radius: 12;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 12px; /* matches contact box */
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  color: black;
 }
 
 .project-tile img {
@@ -183,6 +131,31 @@ body {
   object-fit: contain;
 }
 
+/* Hover effect */
+.project-tile:hover {
+  transform: translateY(-5px);
+}
+
+/* Individual colors (match work page) */
+.project-tile.summer-shack {
+  background-color: #005996; /* navy blue */
+  color: white;
+}
+
+.project-tile.sonsie {
+  background-color: #e6ddff; /* light purple */
+}
+
+.project-tile.enza {
+  background-color: #d9ecff; /* light blue */
+}
+
+.project-tile.luckys {
+  background-color: #000000; /* black */
+  color: white;
+}
+
+/* View More link */
 .view-more {
   display: inline-block;
   margin-top: 30px;
@@ -197,7 +170,9 @@ body {
   text-decoration: underline;
 }
 
-/* Contact box */
+/* ==========================
+   Contact Box
+========================== */
 .contact-box {
   background-color: #d9ecff;
   padding: 20px 30px;
@@ -228,42 +203,3 @@ body {
 .contact-box a:hover {
   text-decoration: underline;
 }
-/* Shared tile styling */
-.project-tile {
-  width: 220px;
-  height: 220px;
-  border-radius: 12;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.project-tile img {
-  max-width: 80%;
-  max-height: 80%;
-  object-fit: contain;
-}
-
-/* Hover effect for interactivity */
-.project-tile:hover {
-  transform: translateY(-5px);
-}
-
-/* Individual colors (match work page) */
-.project-tile.summer-shack {
-  background-color: #005996; /* same blue as work page */
-  color: white;
-}
-
-.project-tile.sonsie {
-  background-color: #e6ddff; /* light purple */
-  color: black;
-}
-
-.project-tile.enza {
-  background-color: #d9ecff; /* light blue */
-  color: black;
-}
-
