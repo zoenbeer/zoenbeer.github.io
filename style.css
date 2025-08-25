@@ -169,7 +169,7 @@ body {
 .project-tile {
   width: 220px;
   height: 220px;
-  border-radius: 0;
+  border-radius: 12;
   background: white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
@@ -232,7 +232,7 @@ body {
 .project-tile {
   width: 220px;
   height: 220px;
-  border-radius: 0;
+  border-radius: 12;
   display: flex;
   align-items: center;
   justify-content: center;
