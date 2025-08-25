@@ -228,3 +228,42 @@ body {
 .contact-box a:hover {
   text-decoration: underline;
 }
+/* Shared tile styling */
+.project-tile {
+  width: 220px;
+  height: 220px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.project-tile img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* Hover effect for interactivity */
+.project-tile:hover {
+  transform: translateY(-5px);
+}
+
+/* Individual colors (match work page) */
+.project-tile.summer-shack {
+  background-color: #005996; /* same blue as work page */
+  color: white;
+}
+
+.project-tile.sonsie {
+  background-color: #e6ddff; /* light purple */
+  color: black;
+}
+
+.project-tile.enza {
+  background-color: #d9ecff; /* light blue */
+  color: black;
+}
+
